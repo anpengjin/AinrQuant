@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from utils.utils import numParams
+from utils import numParams
 
 
 class GLSTM(nn.Module):
@@ -172,6 +172,7 @@ def test_model():
     x = torch.randn((4, 2, 300, 161), dtype=torch.float32)
     y = net(x)
     print('{} -> {}'.format(x.shape, y.shape))
+    print(net)
 
 
 if __name__ == "__main__":
